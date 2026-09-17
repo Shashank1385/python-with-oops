@@ -1,0 +1,45 @@
+# Base / Parent Class
+class Vehicle:
+
+    def __init__(self, brand):
+        self.brand = brand
+
+    def start_engine(self):
+        return f"{self.brand} engine started."
+
+
+# Child Class 1
+class Car(Vehicle):
+
+    def drive(self):
+        return f"Driving the {self.brand} car on the road."
+
+
+# Child Class 2
+class Motorcycle(Vehicle):
+
+    def wheelie(self):
+        return f"Popping a wheelie on the {self.brand} motorcycle."
+
+
+
+class Boat(Vehicle):
+
+    def sail(self):
+        return f"Sailing the {self.brand} boat on water."
+
+
+
+car = Car("Toyota")
+bike = Motorcycle("Yamaha")
+boat = Boat("Yamaha Marine")
+
+
+print(car.start_engine())
+print(bike.start_engine())
+print(boat.start_engine())
+
+
+print(car.drive())
+print(bike.wheelie())
+print(boat.sail())
