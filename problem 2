@@ -1,0 +1,24 @@
+class Camera:
+
+    def take_photo(self):
+        return "Taking a high-resolution photo."
+
+
+class Phone:
+
+    def make_call(self, number):
+        return f"Calling {number}..."
+
+
+
+class Smartphone(Camera, Phone):
+
+    def __init__(self, model):
+        self.model = model
+
+
+
+my_phone = Smartphone("TechPro X")
+
+print(my_phone.take_photo())  
+print(my_phone.make_call("555-0199"))  
